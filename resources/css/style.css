@@ -1,0 +1,272 @@
+html,
+body {
+	font-size: 16px;
+	background-color: #f5f5f5;
+	color: #4c4c4c;
+	font-family: 'Avenir-Book', Helvetica, Arial, sans-serif;
+}
+
+/*Custom Fonts*/
+
+@font-face {
+	font-family: Avenir-Light;
+	src: url("../fonts/AvenirLTStd-Light.otf");
+}
+
+@font-face {
+	font-family: Avenir-Book;
+	src: url("../fonts/AvenirLTStd-Book.otf");
+}
+
+@font-face {
+	font-family: Gotham-Thin;
+	src: url("../fonts/Gotham-Thin.otf");
+}
+
+@font-face {
+	font-family: Gotham-Book;
+	src: url("../fonts/Gotham-Book.otf");
+}
+
+@font-face {
+	font-family: Gotham-Medium;
+	src: url("../fonts/Gotham-Medium.otf");
+}
+
+@font-face {
+	font-family: HeroicCondensed-Bold;
+	src: url("../fonts/HeroicCondensed-Bold.otf");
+}
+
+@font-face {
+	font-family: HeroicCondensed-Medium;
+	src: url("../fonts/HeroicCondensed-Medium.otf");
+}
+
+/*Font Styles*/
+
+a {
+	color: #4b768a;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header a,
+header a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: 'HeroicCondensed-Bold', 'Gotham-Medium', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 3rem;
+}
+
+h2,
+h3 {
+	font-family: 'HeroicCondensed-Medium', 'Gotham-Medium', Helvetica, Arial, sans-serif;
+	font-size: 2.75rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+p {
+	line-height: 1.4;
+}
+
+
+/*Flex parents*/
+
+.container,
+header,
+.header,
+.menu,
+.menu ul,
+.sub,
+.sub li,
+.hero,
+.splash,
+.main,
+footer {
+	display: flex;
+}
+
+/*Container Styles*/
+.container {
+	max-width: 1400px;
+	width: 100%;
+	padding: 0px 15px;
+}
+
+/*Header Styles*/
+
+header {
+	justify-content: center;
+	border-bottom: 1px solid #cccccc;
+}
+
+.header {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu a {
+	color: #4c4c4c;
+	padding: 25px;
+	transition-duration: 0.3s;
+}
+
+.menu a:hover {
+	color: #f5f5f5;
+	background-color: #4b768a;
+	transition-duration: 0.3s;
+}
+
+.menu li {
+	align-items: center;
+	display: inline-flex;
+}
+
+.hassub a:hover {
+	color: #ffffff;
+	background-color: #4b768a;
+	transition-duration: 0.3s;
+	width: 100%;
+}
+
+.hassub ul {
+	display: none;
+}
+
+.hassub:hover ul {
+	display: flex;
+	flex-direction: column;
+	margin-top: 87px;
+}
+
+.sub {
+	position: absolute;
+	margin-top: 10px;
+	background-color: #f5f5f5;
+}
+
+.sub a {
+	padding: 10px 25px;
+}
+
+/*Hero*/
+
+.hero {
+	height: 75vh;
+	min-height: 500px;
+	overflow: hidden;
+	align-items: center;
+	background-color: #cccccc;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+}
+
+.hero img {
+	width: 100%;
+}
+
+.hero .container {
+	flex-direction: column;
+	position: absolute;
+	z-index: 5;
+}
+
+.hero h1 {
+	display: block;
+	font-size: 6rem;
+	width: 100%;
+}
+
+.hero a {
+	display: block;
+	font-size: 1.25rem;
+	text-decoration: none;
+	margin-top: 25px;
+}
+
+.hero.about p {
+	width: 50%;
+}
+
+/*Body*/
+
+.main {
+	padding: 50px 0px;
+	justify-content: center;
+}
+
+.main.about {
+	padding-bottom: 15px;
+}
+
+.main .container {
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.card {
+	background-color: #ffffff;
+	width: 31%;
+}
+
+.about .card {
+	margin-bottom: 35px;
+}
+
+.splash {
+	height: 175px;
+	overflow: hidden;
+	align-items: center;
+}
+
+.splash img {
+	width: 100%;
+	transform: scale(1);
+	transition-duration: 0.3s;
+}
+
+.splash img:hover {
+	transform: scale(1.1);
+	transition-duration: 0.3s;
+}
+
+.teaser {
+	padding: 20px;
+}
+
+.teaser p {
+	margin: 10px 0px;
+}
+
+.longcopy {
+	margin: 25px 0px 0px;
+}
+
+.longcopy h2 {
+	margin-bottom: 10px;
+}
+
+.about .longcopy p {
+	margin-bottom: 25px;
+}
+
+/*Footer*/
+
+footer {
+	justify-content: center;
+	padding: 15px 0px;
+	border-top: 1px solid #cccccc;
+	color: #cccccc;
+	font-size: 0.75rem;
+}
