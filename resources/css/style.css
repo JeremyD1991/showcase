@@ -242,25 +242,6 @@ header {
 	margin-bottom: 35px;
 }
 
-.portfolio .card {
-	width: calc((100% / 3) - 25px);
-}
-
-.portfolio .card:nth-of-type(2) {
-	margin: 0 25px;
-}
-
-.portfolio .splash {
-	height: 65vh;
-	display: flex;
-	justify-content: center;
-}
-
-.portfolio .splash img {
-	width: auto;
-	height: 65vh;
-}
-
 .splash {
 	height: 175px;
 	overflow: hidden;
@@ -291,15 +272,6 @@ header {
 	transition-duration: 0.3s;
 }
 
-.portfolio h3 {
-	position: relative;
-	z-index: 15;
-	transform: rotate(270deg);
-	margin: -50px 0 0 30px;
-	max-width: 0px;
-	font-size: 3rem;
-}
-
 .teaser {
 	padding: 20px;
 }
@@ -321,6 +293,36 @@ form {
 	margin-bottom: 25px;
 }
 
+/*Portfolio*/
+.portfolio .card {
+	width: calc((100% / 3) - 25px);
+}
+
+.portfolio .card:nth-of-type(2) {
+	margin: 0 25px;
+}
+
+.portfolio .splash {
+	height: 65vh;
+	display: flex;
+	justify-content: center;
+}
+
+.portfolio .splash img {
+	width: auto;
+	height: 65vh;
+}
+
+.portfolio h3 {
+	position: relative;
+	z-index: 15;
+	transform: rotate(270deg);
+	margin: -50px 0 0 30px;
+	max-width: 0px;
+	font-size: 3rem;
+}
+
+/*Contact*/
 .contact .longcopy {
 	width: 48%;
 }
@@ -332,7 +334,12 @@ form {
 	justify-content: space-between;
 }
 
-form label {
+form ul {
+	width: 100%;
+}
+
+form label,
+.hide {
 	display: none;
 }
 
@@ -621,3 +628,84 @@ footer {
 	margin-right: 25px;
 }
 /*Slick End*/
+
+@media only screen and (max-width: 900px) {
+	html,
+	body {
+		font-size: 15px;
+	}
+	
+	.hassub:hover ul {
+		margin-top: 32px;
+		margin-left: -107px;
+	}
+	
+	.container {
+		max-width: 700px;
+	}
+	
+	.main {
+		padding: 30px 0px;
+	}
+	
+	.splash {
+		height: 125px;
+	}
+	
+	.about .card {
+		width: 49%;
+	}
+	
+	.hero,
+	.slick-slide {
+		height: 40vh;
+	}
+	
+	.slick-arrow {
+		margin-top: calc(40vh / 2);
+		opacity: 0;
+	}
+	
+	.thumb {
+		max-height: 125px;
+	}
+	
+	.thumb img {
+		transform: scale(1.2);
+	}
+
+	.thumb img:hover {
+		transform: scale(1.25);
+	}
+	
+	.portfolio .card,
+	.portfolio .card:nth-of-type(2) {
+		width: 100%;
+		margin: 0 0 30px 0;
+	}
+	
+	.portfolio .card,
+	.portfolio .splash {
+		max-height: 300px;
+	}
+	
+	.portfolio .splash img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.portfolio h3 {
+		transform: rotate(0deg);
+		margin: -60px 0 0 20px;
+	}
+	
+	.contact .container {
+		flex-direction: column-reverse;
+	}
+	
+	.contact .longcopy,
+	form {
+		width: 100%;
+	}
+	
+}
