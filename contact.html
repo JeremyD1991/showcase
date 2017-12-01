@@ -8,6 +8,7 @@
 	<link href="resources/css/style.css" type="text/css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src ="resources/js/jquery.colorbox.js"></script>
+	<script src ="resources/js/jquery.gallery.js"></script>
 </head>
 <body>
 	<!--Header & Menu container-->
@@ -33,7 +34,7 @@
 	<!--Contact Content-->
 	<div class="main contact">
 		<div class="container">
-			<form>
+			<form name="contactme" method="post" action="resources/php/email_form.php">
 				<label for="">First Name</label>
 				<input type="text" id="" class="small" name="firstname" placeholder="First name">
 				<label for="">Last Name</label>
