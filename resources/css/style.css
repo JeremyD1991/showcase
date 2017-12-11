@@ -139,7 +139,10 @@ header {
 
 .menu li {
 	align-items: center;
-	display: inline-flex;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	top: 0;
 }
 
 .hassub a:hover {
@@ -156,12 +159,12 @@ header {
 .hassub:hover ul {
 	display: flex;
 	flex-direction: column;
-	margin-top: 87px;
+	top: 0;
 }
 
 .sub {
 	position: absolute;
-	margin-top: 10px;
+	margin-top: 66px;
 	background-color: #f5f5f5;
 }
 
@@ -698,6 +701,18 @@ footer {
 	.portfolio h3 {
 		transform: rotate(0deg);
 		margin: -60px 0 0 20px;
+	}
+	
+	#colorbox,
+	#cboxContent, 
+	#cboxLoadedContent,
+	.cboxPhoto {
+		width: auto!important;
+		max-width: 90vw!important;
+		height: auto!important;
+		left: 0!important;
+		right: 0!important;
+		margin: 0 auto;
 	}
 	
 	.contact .container {
