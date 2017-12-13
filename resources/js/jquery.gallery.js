@@ -6,7 +6,7 @@ $( document ).ready(function() {
 		autoplay: true,
 		autoplaySpeed: 3000
       });
-	$('.toggle').onclick(function() {
+	$('.toggle').click(function() {
 		$('.sub').toggleClass('active');
 	});
 });
