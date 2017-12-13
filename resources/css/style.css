@@ -474,6 +474,10 @@ form input:nth-of-type(3) {
 	background-color: #e0e0e0;
 }
 
+#cboxLoadedContent {
+	overflow: hidden!important;
+}
+
 /*Footer*/
 
 footer {
@@ -639,11 +643,6 @@ footer {
 		font-size: 15px;
 	}
 	
-	.hassub:hover ul {
-		margin-top: 32px;
-		margin-left: -107px;
-	}
-	
 	.container {
 		max-width: 700px;
 	}
@@ -722,6 +721,40 @@ footer {
 	.contact .longcopy,
 	form {
 		width: 100%;
+	}
+	
+}
+
+@media only screen and (max-width: 500px) {
+	
+	.menu {
+		display: none;
+	}
+	
+	.active {
+		display: flex;
+	}
+	
+	.card {
+		width: 100%;
+		margin-top: 30px;
+	}
+	
+	.card:first-of-type {
+		margin-top: 0px;
+	}
+	
+	.about .card {
+		width: 100%;
+		margin-top: 0px;
+	}
+	
+	.portfolio .card, .portfolio .splash {
+		max-height: 175px;
+	}
+	
+	.thumb {
+		width: calc((100% / 2) - 10px);
 	}
 	
 }
